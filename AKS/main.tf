@@ -13,13 +13,10 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_B2ps_v2"
- 
-    upgrade_settings {
-      max_surge = "0"
-    }
   }
  
   identity {
     type = "SystemAssigned"
   }
 }
+ 
